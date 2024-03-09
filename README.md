@@ -35,10 +35,12 @@
     ```
     git commit -m "Первый абзац"
     ```
+    ![](/gitimages/git_commit.png)
 5. Просмотрел статус текущего репозитория:
     ```
     git status
     ```
+    ![](/gitimages/git_status.png)
 6. Добавил еще один файл:
     ```
     echo. > another.txt
@@ -47,10 +49,12 @@
     ```
     git commit -m "Еще один текстовый документ"
     ```
+    ![](/gitimages/git_commit_2.png)
 8. Посмотрел протокол коммитов:
     ```
     git log
     ```
+    ![](/gitimages/git_log.png)
 9. Посмотрел изменения в файле по сравнению с последним коммитом:
     ```
     git diff
@@ -63,6 +67,7 @@
     ```
     git branch
     ```
+    ![](/gitimages/git_branch.png)
 12. Создал новую ветку:
     ```
     git branch newbranch
@@ -71,20 +76,23 @@
     ```
     git checkout newbranch
     ```
+    ![](/gitimages/git_checkout_newbranch.png)
 14. Создал новую ветку и сразу же переключилися на нее:
     ```
     git checkout -b newbranch2
     ```
+    ![](/gitimages/git_checkout_newbranch2.png)
 15. Удалил ветку:
     ```
     git branch -d newbranch2
     ```
-16. Добавил merge изменения из указанной ветки в текущую:
+    ![](/gitimages/git_branch_d.png)
+17. Добавил merge изменения из указанной ветки в текущую:
     ```
     git checkout newbranch
     git merge master
     ```
-17. Создал конфликт:
+18. Создал конфликт:
     * Переключился на ветку master
     
     ```
@@ -97,7 +105,7 @@
       git add paragraphs.txt
       git commit -m "Стер все и добавил абзац"
       ```
-      
+      ![](/gitimages/conflict1.png)
     * Изменил файл paragraphs.txt
     * Добавил и закоммитил
     
@@ -105,19 +113,23 @@
       git add paragraphs.txt
       git commit -m "Стер все и добавил абзац"
       ```
+      ![](/gitimages/conflict2.png)
     * Переключился на ветку master и попытался выполнить слияние:
       
       ```
       git checkout master
       git merge newbranch
       ```
-18. Посмотрел в каких файлах есть конфликты:
+      ![](/gitimages/conflict3.png)
+19. Посмотрел в каких файлах есть конфликты:
     ```
     git status
     ```
+    ![](/gitimages/git_status_conflict.png)
     * Так выглядит текстовый документ при конфликте:
-    *картинка*
-19. Устранил конфликт:
+    
+    ![](/gitimages/conflict4.png)
+20. Устранил конфликт:
     * Выбрал текст, который хочу оставить - "Стер все и добавил абзац", удалив разметку Git
     * Добавил и закоммитил
       
@@ -125,11 +137,12 @@
       git add paragraphs.txt
       git commit -m "Устранен конфликт слияния в paragraphs.txt"
       ```
+      ![](/gitimages/conflict5.png)
 19. Переключился на указанный коммит:
     ```
     git checkout 04b16e3
     ```
-
+    ![](/gitimages/git_checkout_resolved_conflict.png)
 18. Сделал ребазирование *rebase* текущей ветки:
     ```
     git rebase master
@@ -147,10 +160,12 @@
     git remote add origin https://github.com/zzzatoox/gitcommands.git
     git push origin master
     ```
+    ![](/gitimages/git_push.png)
 21. Забрал изменения из репозитория, для которого были созданы удаленные ветки по умолчанию:
     ```
     git pull origin master
     ```
+    ![](/gitimages/git_pull1.png)
 22. Забрал изменения удаленной ветки из репозитория основной ветки по умолчанию:
     ```
     git checkout -b feature-branch
@@ -160,7 +175,9 @@
     git push origin feature-branch
     git pull origin feature-branch:master
     ```
+    ![](/gitimages/git_pull2.png)
 23. Клонировал репозиторий:
     ```
     git clone https://github.com/zzzatoox/gitcommands.git
     ```
+    ![](/gitimages/git_clone.png)
